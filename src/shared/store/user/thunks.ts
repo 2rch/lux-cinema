@@ -1,12 +1,10 @@
-import { getErrorText } from '../../helpers/getErrorText';
-import { createAsyncThunk } from '@reduxjs/toolkit';
-import { getLanguages } from '../../../api/user';
-import {
-  logoutUser as logoutUserRequest,
-} from '../../../api/auth';
+import { getErrorText } from "../../helpers/getErrorText";
+import { createAsyncThunk } from "@reduxjs/toolkit";
+import { getLanguages } from "../../../api/user";
+import { logoutUser as logoutUserRequest } from "../../../api/auth";
 
 export const getAllLanguages = createAsyncThunk(
-  'user/getLanguages',
+  "user/getLanguages",
   async (_, thunkAPI) => {
     try {
       const response = await getLanguages();
@@ -17,19 +15,19 @@ export const getAllLanguages = createAsyncThunk(
     } catch (e) {
       return thunkAPI.rejectWithValue(getErrorText(e as Error));
     }
-  }
+  },
 );
 
 export const logoutUser = createAsyncThunk(
-  'user/logout',
+  "user/logout",
   async (_, thunkAPI) => {
     try {
       const response = await logoutUserRequest();
       if (response.request.status !== 401) {
-        localStorage.removeItem('token');
+        localStorage.removeItem("token");
       }
     } catch (e) {
       return thunkAPI.rejectWithValue(getErrorText(e as Error));
     }
-  }
+  },
 );

@@ -4,9 +4,9 @@ import {
   SET_ERROR,
   SET_USER_DATA,
   SET_LANGUAGE,
-} from '../../constants/store';
-import { createAction } from '@reduxjs/toolkit';
-import { UserData } from './user';
+} from "../../constants/store";
+import { createAction } from "@reduxjs/toolkit";
+import { UserData } from "./user";
 
 export const setUserData = createAction<UserData>(SET_USER_DATA);
 export const setUserToken = createAction<string>(SET_TOKEN);
