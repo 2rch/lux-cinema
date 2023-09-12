@@ -1,13 +1,17 @@
-import logo from './logo.svg';
+import React from "react";
+import logo from '../shared/assets/logo.svg';
 import './App.css';
+import { useTranslation } from "react-i18next";
+import {withProviders} from "./providers";
 
 function App() {
+  const { t } = useTranslation();
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Site title is {t('common.title')}
         </p>
         <a
           className="App-link"
@@ -22,4 +26,4 @@ function App() {
   );
 }
 
-export default App;
+export default withProviders(App);
