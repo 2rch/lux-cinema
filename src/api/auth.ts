@@ -3,20 +3,20 @@ import {
   AUTH_VERIFY,
   AUTH_LOGIN,
   AUTH_LOGOUT,
-} from '../shared/constants/api';
-import axios from 'axios';
-import {API_URL} from "../shared/constants/api";
+} from "../shared/constants/api";
+import axios from "axios";
+import { API_URL } from "../shared/constants/api";
 
 export const loginUser = (login: string, password: string) => {
   return axios.post(`${API_URL}${AUTH_LOGIN}`, {
     data: {
-      type: 'login',
+      type: "login",
       attributes: {
         login: login,
-        password: password
-      }
-    }
-  })
+        password: password,
+      },
+    },
+  });
 };
 
 export const logoutUser = () => {
@@ -26,7 +26,7 @@ export const logoutUser = () => {
 export const refreshUserToken = (token: string) => {
   return axios.post(`${API_URL}${AUTH_REFRESH}`, {
     data: {
-      type: 'refresh',
+      type: "refresh",
       attributes: {
         access_token: token,
       },
@@ -36,6 +36,6 @@ export const refreshUserToken = (token: string) => {
 
 export const checkUserToken = (token: string) => {
   return axios.get(
-    `${process.env.REACT_APP_IAM_URL}${AUTH_VERIFY}?token=${token}`
+    `${process.env.REACT_APP_IAM_URL}${AUTH_VERIFY}?token=${token}`,
   );
 };
