@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import { withProviders } from "./providers";
 import { Routing } from "./router";
 

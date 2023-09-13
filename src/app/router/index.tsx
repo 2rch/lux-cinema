@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { HomePage } from "../../features/home-page";
+import { HomePage } from "../../feature/home-page";
 
 export const Routing = () => {
   return (
