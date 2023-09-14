@@ -1,0 +1,38 @@
+.header-button {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    padding: 5px;
+    border: 1px solid yellow;
+    border-radius: 5px;
+    justify-content: space-between;
+    transition: all 0.5s;
+}
+
+.header-button:hover {
+    background: #61dafb;
+    border: 1px solid black;
+    transition: all 0.5s;
+}
+
+.header-button-icon {
+    margin-right: 10px;
+}
+
+header a {
+    text-decoration: none;
+    color: grey;
+}
+
+header {
+    background: yellow;
+}
+
+header a:hover {
+    color: black;
+}
+
+.header-button-icon {
+    width: 20px;
+    height: 20px;
+}
