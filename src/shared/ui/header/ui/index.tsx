@@ -2,11 +2,11 @@ import React from "react";
 import { leftHeaderButtons, loginButton, logoutButton } from "../config";
 import { HeaderButton } from "./header-button";
 import { useSelector } from "react-redux";
-import { selectToken } from "../../../../store/user/selectors";
-import "./index.css";
+import { selectToken } from "../../../store/user/selectors";
 import { HeaderLogo } from "./header-logo";
+import "./index.scss";
 
-export const HeaderView = () => {
+export const Header = () => {
   const userToken = useSelector(selectToken);
   const lastButton = userToken ? logoutButton : loginButton;
   return (

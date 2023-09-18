@@ -1,5 +1,5 @@
 import React from "react";
-import mainLogo from "../../../../../assets/logo.png";
+import mainLogo from "../../../../assets/logo.png";
 import "./index.css";
 
 export const HeaderLogo = () => (

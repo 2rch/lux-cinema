@@ -1,6 +1,6 @@
-import homeIcon from "../../../../assets/header/home.svg";
-import loginIcon from "../../../../assets/header/login.svg";
-import logoutIcon from "../../../../assets/header/logout.svg";
+import homeIcon from "../../../assets/header/home.svg";
+import loginIcon from "../../../assets/header/login.svg";
+import logoutIcon from "../../../assets/header/logout.svg";
 
 export const leftHeaderButtons = [
   {
