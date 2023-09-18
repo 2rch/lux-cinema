@@ -1,0 +1,28 @@
+@import "../../../../styles/helpers/variables";
+
+.movie-card-image {
+  width: 350px;
+  height: 500px;
+}
+
+.movie-card-text {
+  position: absolute;
+  width: 350px;
+  font-size: xx-large;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  margin-top: -80px;
+  margin-bottom: 40px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.movie-card-description {
+  display: none
+}
+
+.movie-card-description .selected {
+  display: block;
+}

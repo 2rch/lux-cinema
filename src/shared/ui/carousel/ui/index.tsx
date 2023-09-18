@@ -6,7 +6,7 @@ import "./index.scss";
 
 export const Carousel = () => {
   return (
-    <ResponsiveCarousel interval={1500} autoPlay>
+    <ResponsiveCarousel interval={3000} autoPlay infiniteLoop>
       {carouselElements.map((element: CarouselElement) => (
         <div className={"carousel-element"} key={element.title}>
           <img
