@@ -4,3 +4,4 @@ export const AUTH_LOGOUT = "/logout";
 export const AUTH_VERIFY = "/verify";
 export const AUTH_REFRESH = "/refresh";
 export const LANGUAGES = "/languages";
+export const MOVIES = "/movies";
