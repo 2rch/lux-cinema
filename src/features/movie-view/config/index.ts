@@ -1,0 +1,2 @@
+export const additionalDescription =
+  "Enjoy the best cinema quality and high additional services in the best movie halls of our country! Select the date you want, pick comfortable time and buy online tickets using left panel. Please, come to our cinema 15 minutes before the show starts and feel free to buy any snacks or drinks in our cinema bar. You can also check out our new brand toys and souvenirs for children or adults on the left side of building. You don't need to print your tickets. Save some trees and show pdf ticket file to our employee instead.";
