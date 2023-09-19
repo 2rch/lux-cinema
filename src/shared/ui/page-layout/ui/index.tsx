@@ -1,8 +1,8 @@
 import React from "react";
 import clsx from "clsx";
-import "./index.scss";
 import { Header } from "../../header";
 import { Footer } from "../../footer/ui";
+import "./index.scss";
 
 interface PageLayoutProps {
   className: string;
