@@ -1,6 +1,8 @@
 import React from "react";
 import clsx from "clsx";
 import "./index.scss";
+import { Header } from "../../header";
+import { Footer } from "../../footer/ui";
 
 interface PageLayoutProps {
   className: string;
@@ -10,7 +12,11 @@ export const PageLayout = (props: PageLayoutProps) => {
   const { className, children } = props;
   return (
     <>
-      <main className={clsx("main", className)}>{children}</main>
+      <main className={clsx("main", className)}>
+        <Header />
+        {children}
+        <Footer />
+      </main>
     </>
   );
 };
