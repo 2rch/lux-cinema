@@ -1,0 +1,39 @@
+@import "src/shared/styles/helpers/variables";
+
+.movie-view {
+  max-width: 40%;
+  margin: 15px;
+  background: $main-color;
+  color: $text-main-color;
+  transition: all 0.5s;
+}
+
+.movie-view:hover {
+  background: $accent-color;
+  color: white;
+  transition: all 0.5s;
+}
+
+.movie-view-top {
+  display: flex;
+}
+
+.movie-view-image {
+  width: 300px;
+  height: 500px;
+  text-align: start;
+  margin: 15px;
+}
+
+.movie-view-title {
+  margin-top: 10%;
+  font-size: 80px;
+  padding: 30px;
+  text-align: center;
+}
+
+.movie-view-description {
+  margin: 15px;
+  font-size: 25px;
+}
+
