@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { getCurrentMovie } from "../lib";
 import { additionalDescription } from "../config";
 import "./index.scss";
+import { useAppDispatch } from "../../../shared/store/store";
+import { setTicketMovie } from "../../../shared/store/ticket/actions";
 
 export const MovieView = () => {
   const currentMovie = getCurrentMovie();
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    if (currentMovie) {
+      dispatch(setTicketMovie(currentMovie.id));
+    }
+  }, [currentMovie]);
 
   if (currentMovie) {
     const { title, image, description } = currentMovie;
