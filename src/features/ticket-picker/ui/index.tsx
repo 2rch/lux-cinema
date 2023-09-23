@@ -3,6 +3,7 @@ import "./index.scss";
 import { useSelector } from "react-redux";
 import { selectTicketHall } from "../../../shared/store/ticket/selectors";
 import { CinemaHall, cinemaHalls } from "../../hall-picker/config";
+import { HallPreview } from "./hall-preview";
 export const TicketPicker = () => {
   const [currentHall, setCurrentHall] = useState<CinemaHall | null>(null);
   const currentHallId = useSelector(selectTicketHall);
@@ -13,7 +14,12 @@ export const TicketPicker = () => {
 
   return (
     <div className={"ticket-picker"}>
-      <div className={"ticket-picker-text"}>{currentHall?.description}</div>
+      {currentHall && (
+        <>
+          <div className={"ticket-picker-text"}>{currentHall?.description}</div>
+          <HallPreview {...currentHall} />
+        </>
+      )}
     </div>
   );
 };

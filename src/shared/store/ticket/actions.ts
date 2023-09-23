@@ -10,4 +10,4 @@ import {
 export const setTicketMovie = createAction<number>(SET_TICKET_MOVIE);
 export const setTicketTime = createAction<number>(SET_TICKET_TIME);
 export const setTicketHall = createAction<number>(SET_TICKET_HALL);
-export const setTicketPlaces = createAction<TicketPlace>(SET_TICKET_PLACES);
+export const setTicketPlaces = createAction<TicketPlace[]>(SET_TICKET_PLACES);

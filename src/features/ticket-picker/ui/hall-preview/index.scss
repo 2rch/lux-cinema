@@ -1,0 +1,17 @@
+.hall-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hall-preview-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hall-preview-grid {
+  display: flex;
+  gap: 2px;
+}

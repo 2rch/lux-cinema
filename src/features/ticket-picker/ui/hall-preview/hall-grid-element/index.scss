@@ -1,0 +1,19 @@
+@import "src/shared/styles/helpers/variables";
+
+.hall-grid-element {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background: $main-color;
+  transition: all 0.5s;
+}
+
+.hall-grid-element.selected {
+  background: $accent-color;
+  transition: all 0.5s;
+}
+
+.hall-grid-element.empty {
+  background: rgba(0,0,0,0);
+  border-color: rgba(0,0,0,0);
+}
