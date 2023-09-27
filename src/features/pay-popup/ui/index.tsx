@@ -1,5 +1,5 @@
 import React from "react";
-import { Popup } from "../../../shared/ui/popup/ui";
+import { Popup } from "../../../shared/ui/popup";
 
 interface BuyPopupProps {
   isOpen: boolean;
