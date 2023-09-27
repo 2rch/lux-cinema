@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { CinemaHall } from "../../../hall-picker/config";
+import { CinemaHall, cinemaHalls } from "../../../hall-picker/config";
 import { HallGridElement } from "./hall-grid-element";
 import { useAppDispatch } from "../../../../shared/store/store";
 import { setTicketPlaces } from "../../../../shared/store/ticket/actions";
 import { useSelector } from "react-redux";
-import { selectTicketPlaces } from "../../../../shared/store/ticket/selectors";
+import {
+  selectTicketHall,
+  selectTicketPlaces,
+} from "../../../../shared/store/ticket/selectors";
 import { TicketPlace } from "../../../../shared/store/ticket/ticket";
 import "./index.scss";
 
 export const HallPreview = ({ hallTicketMap }: CinemaHall) => {
   const selectedTickets = useSelector(selectTicketPlaces);
+  const currentHallId = useSelector(selectTicketHall);
+  const currentHall = cinemaHalls.find((hall) => hall.id === currentHallId);
   const [selectedPlaces, setSelectedPlaces] = useState<string[]>([]);
   const dispatch = useAppDispatch();
 
@@ -34,6 +39,7 @@ export const HallPreview = ({ hallTicketMap }: CinemaHall) => {
         newTicketPlaces.push({
           row: row,
           place: place,
+          price: currentHall?.ticketPrice ?? 0,
         });
       }
       dispatch(setTicketPlaces(newTicketPlaces));
@@ -42,6 +48,8 @@ export const HallPreview = ({ hallTicketMap }: CinemaHall) => {
 
   return (
     <div className={"hall-preview"}>
+      <div className={"hall-preview-screen"} />
+      <div className={"hall-preview-screen-text"}>Screen</div>
       {hallTicketMap.map(({ row, places }) => (
         <div className={"hall-preview-row"} key={row}>
           <div className={"hall-preview-row-text"}>Row {row}</div>

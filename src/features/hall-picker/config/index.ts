@@ -3,6 +3,7 @@ export interface CinemaHall {
   title: string;
   description: string;
   hallTicketMap: HallTicketRow[];
+  ticketPrice: number;
 }
 
 export interface HallTicketRow {
@@ -21,6 +22,7 @@ export const cinemaHalls: CinemaHall[] = [
       { row: 2, places: [1, 2, 3, 4, null, 5, 6, 7, 8] },
       { row: 3, places: [1, 2, 3, 4, null, 5, 6, 7, 8] },
     ],
+    ticketPrice: 10000,
   },
   {
     id: 2,
@@ -31,6 +33,7 @@ export const cinemaHalls: CinemaHall[] = [
       { row: 1, places: [1, 2, 3, null, 4, 5, 6] },
       { row: 2, places: [1, 2, 3, null, 4, 5, 6] },
     ],
+    ticketPrice: 50000,
   },
   {
     id: 3,
@@ -45,5 +48,6 @@ export const cinemaHalls: CinemaHall[] = [
       { row: 5, places: [1, 2, 3, 4, null, 5, 6, 7, 8, null, 9, 10, 11, 12] },
       { row: 6, places: [1, 2, 3, 4, null, 5, 6, 7, 8, null, 9, 10, 11, 12] },
     ],
+    ticketPrice: 30000,
   },
 ];

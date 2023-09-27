@@ -15,3 +15,15 @@
   display: flex;
   gap: 2px;
 }
+
+.hall-preview-screen {
+  margin: 0 auto;
+  width: 80%;
+  border: solid 3px black;
+  border-radius: 50%/100px 100px 0 0;
+}
+
+.hall-preview-screen-text {
+  font-size: larger;
+  padding: 10px;
+}

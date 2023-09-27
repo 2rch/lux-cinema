@@ -3,7 +3,10 @@ import { RadioSelect } from "../../../shared/ui/radio-select";
 import { useSelector } from "react-redux";
 import { selectTicketHall } from "../../../shared/store/ticket/selectors";
 import { useAppDispatch } from "../../../shared/store/store";
-import { setTicketHall } from "../../../shared/store/ticket/actions";
+import {
+  setTicketHall,
+  setTicketPlaces,
+} from "../../../shared/store/ticket/actions";
 import { cinemaHalls } from "../config";
 import "./index.scss";
 
@@ -12,6 +15,7 @@ export const HallPicker = () => {
   const dispatch = useAppDispatch();
   const handleHallChange = (hallId: number) => {
     dispatch(setTicketHall(hallId));
+    dispatch(setTicketPlaces([]));
   };
   const hallOptions = cinemaHalls.map((hall) => {
     return {
