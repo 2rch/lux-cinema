@@ -3,3 +3,8 @@ export const SET_TOKEN = "user/setToken";
 export const REMOVE_TOKEN = "user/removeToken";
 export const SET_ERROR = "user/setError";
 export const SET_LANGUAGE = "user/setLanguage";
+
+export const SET_TICKET_MOVIE = "ticket/setMovie";
+export const SET_TICKET_TIME = "ticket/setTime";
+export const SET_TICKET_HALL = "ticket/setHall";
+export const SET_TICKET_PLACES = "ticket/setPlaces";

@@ -30,9 +30,9 @@ export const getTimeOptions = (pickedDate: number) => {
 
   const today = new Date();
   if (selectedDate.getDay() == today.getDay()) {
-    const currentTime = new Date(pickedDate).getHours();
-    if (currentTime > workingHours.start) {
-      timeInHours = currentTime;
+    const acceptedTime = new Date(today).getHours() + 1;
+    if (acceptedTime > workingHours.start) {
+      timeInHours = acceptedTime;
     }
   }
 

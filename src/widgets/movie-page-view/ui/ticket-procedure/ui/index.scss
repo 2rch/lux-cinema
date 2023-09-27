@@ -1,7 +1,15 @@
 @import "../../../../../shared/styles/helpers/variables";
 
 .ticket-procedure {
-  min-width: 55%;
+  width: 55%;
   background: $main-color;
   margin: 15px;
+}
+
+.ticket-hall-picker {
+  display: flex;
+  background: grey;
+  margin: 15px;
+  min-height: 55%;
+  transition: all 0.5s;
 }

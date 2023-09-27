@@ -1,0 +1,33 @@
+.ticket-buy-preview {
+  display: flex;
+  background: grey;
+  margin: 15px 15px 0 15px;
+  max-height: 200px;
+  transition: all 0.5s;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+
+.ticket-buy-total {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  margin: 0 15px;
+  padding: 15px;
+  background: grey;
+}
+
+.ticket-buy-text {
+  font-size: larger;
+  background: lightgray;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.ticket-buy-button {
+  font-size: larger;
+  background: green;
+  color: white;
+  border-radius: 2px;
+}

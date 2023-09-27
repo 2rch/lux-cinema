@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import { Header } from "../../header";
-import { Footer } from "../../footer/ui";
+import { Footer } from "../../footer";
 import "./index.scss";
 
 interface PageLayoutProps {

@@ -1,0 +1,40 @@
+.custom-popup {
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  background: lightgray;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.custom-popup.open {
+  visibility: visible;
+}
+
+.custom-popup-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-popup-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-popup-cancel-button {
+  font-size: large;
+  background: lightcoral;
+  padding: 5px 25px 5px 25px;
+}
+
+.custom-popup-confirm-button {
+  font-size: large;
+  background: lightgreen;
+  padding: 5px 25px 5px 25px;
+}
