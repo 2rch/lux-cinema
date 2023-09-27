@@ -7,12 +7,14 @@ import {
 import { TicketView } from "./ticket-view";
 import "./index.scss";
 import { TicketPlace } from "../../../shared/store/ticket/ticket";
+import { useTranslation } from "react-i18next";
 
 interface TicketBuyPreviewProps {
   onBuyClick: (tickets: TicketPlace[]) => void;
 }
 
 export const TicketBuyPreview = ({ onBuyClick }: TicketBuyPreviewProps) => {
+  const { t } = useTranslation();
   const selectedTime = useSelector(selectTicketTime);
   const selectedTickets = useSelector(selectTicketPlaces);
   const selectedTicketsRawPrice = selectedTickets.reduce(
@@ -29,13 +31,15 @@ export const TicketBuyPreview = ({ onBuyClick }: TicketBuyPreviewProps) => {
       </div>
       {selectedTickets.length > 0 && (
         <div className={"ticket-buy-total"}>
-          <div className={"ticket-buy-text"}>{selectedTicketsPrice} UAH</div>
+          <div className={"ticket-buy-text"}>
+            {t("common.price_with_currency", { price: selectedTicketsPrice })}
+          </div>
           <button
             className={"ticket-buy-button"}
             onClick={() => onBuyClick(selectedTickets)}
             disabled={selectedTime === null}
           >
-            Buy
+            {t("common.buy_button")}
           </button>
         </div>
       )}

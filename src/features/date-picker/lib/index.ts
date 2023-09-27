@@ -1,7 +1,7 @@
 import { daysOfWeek, monthsOfYear, workingHours } from "../config";
 import { SelectOption } from "../../../shared/ui/select";
 
-export const getDayOptions = () => {
+export const getDayOptions = (t: (key: string) => string) => {
   const result: SelectOption[] = [];
   const today = new Date();
 
@@ -12,9 +12,9 @@ export const getDayOptions = () => {
       today.getDate() + i,
     );
     result.push({
-      title: `${daysOfWeek[date.getDay()]}, ${date.getDate()} of ${
-        monthsOfYear[date.getMonth()]
-      }`,
+      title: `${t(daysOfWeek[date.getDay()])}, ${date.getDate()} ${t(
+        monthsOfYear[date.getMonth()],
+      )}`,
       value: date.getTime(),
     });
   }

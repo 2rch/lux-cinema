@@ -4,6 +4,7 @@ import { additionalDescription } from "../config";
 import "./index.scss";
 import { useAppDispatch } from "../../../shared/store/store";
 import { setTicketMovie } from "../../../shared/store/ticket/actions";
+import { useTranslation } from "react-i18next";
 
 export const MovieView = () => {
   const currentMovie = getCurrentMovie();
@@ -16,15 +17,19 @@ export const MovieView = () => {
   }, [currentMovie]);
 
   if (currentMovie) {
+    const { t } = useTranslation();
     const { title, image, description } = currentMovie;
+
     return (
       <div className={"movie-view"}>
         <div className={"movie-view-top"}>
-          <img className={"movie-view-image"} src={image} alt={title} />
-          <div className={"movie-view-title"}>{title}</div>
+          <img className={"movie-view-image"} src={image} alt={t(title)} />
+          <div className={"movie-view-title"}>{t(title)}</div>
         </div>
-        <div className={"movie-view-description"}>{description}</div>
-        <div className={"movie-view-description"}>{additionalDescription}</div>
+        <div className={"movie-view-description"}>{t(description)}</div>
+        <div className={"movie-view-description"}>
+          {t(additionalDescription)}
+        </div>
       </div>
     );
   }

@@ -1,5 +1,7 @@
 import React from "react";
 import "./index.scss";
+import { useTranslation } from "react-i18next";
+import clsx from "clsx";
 
 export interface SelectOption {
   title: string;
@@ -10,21 +12,27 @@ interface SelectProps {
   options: SelectOption[];
   onChange: (value: number) => void;
   selectedOption?: number | null;
+  additionalClass?: string;
 }
 
 export const Select = ({
   selectedOption = null,
   options,
   onChange,
+  additionalClass,
 }: SelectProps) => {
+  const { t } = useTranslation();
   const handleValueChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     onChange(Number(e.target.value));
   };
   return (
-    <select className={"custom-selector"} onChange={handleValueChange}>
+    <select
+      className={clsx("custom-selector", additionalClass && additionalClass)}
+      onChange={handleValueChange}
+    >
       {!selectedOption && (
         <option disabled selected>
-          ---Select an option---
+          {t("selector.default_option")}
         </option>
       )}
       {options.map((option) => (

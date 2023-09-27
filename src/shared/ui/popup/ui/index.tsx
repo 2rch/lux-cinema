@@ -1,6 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import "./index.scss";
+import { useTranslation } from "react-i18next";
 
 interface PopupProps {
   title: string;
@@ -17,6 +18,7 @@ export const Popup = ({
   onCancelClick,
   children,
 }: PopupProps) => {
+  const { t } = useTranslation();
   return (
     <div className={clsx("custom-popup", isOpen && "open")}>
       <div className={"custom-popup-header"}>
@@ -31,13 +33,13 @@ export const Popup = ({
           className={"custom-popup-cancel-button"}
           onClick={onCancelClick}
         >
-          Cancel
+          {t("common.cancel_button")}
         </button>
         <button
           className={"custom-popup-confirm-button"}
           onClick={onConfirmClick}
         >
-          Confirm
+          {t("common.confirm_button")}
         </button>
       </div>
     </div>

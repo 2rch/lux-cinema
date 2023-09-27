@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { selectToken } from "../../../store/user/selectors";
 import { HeaderLogo } from "./header-logo";
 import "./index.scss";
+import { LanguageSelect } from "./language-select";
 
 export const Header = () => {
   const userToken = useSelector(selectToken);
@@ -17,7 +18,10 @@ export const Header = () => {
           <HeaderButton key={i} {...button} />
         ))}
       </div>
-      <HeaderButton {...lastButton} additionalClass={"header-button-right"} />
+      <div className={"header-right"}>
+        <LanguageSelect />
+        <HeaderButton {...lastButton} additionalClass={"header-button-right"} />
+      </div>
     </header>
   );
 };

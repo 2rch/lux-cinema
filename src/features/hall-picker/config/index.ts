@@ -14,9 +14,8 @@ export interface HallTicketRow {
 export const cinemaHalls: CinemaHall[] = [
   {
     id: 1,
-    title: "2D Sound Pro",
-    description:
-      "In this hall you are going to have huge TechPro++ 2D projector screen with advanced 8D sound around you",
+    title: "hall.title_1",
+    description: "hall.description_1",
     hallTicketMap: [
       { row: 1, places: [1, 2, 3, 4, null, 5, 6, 7, 8] },
       { row: 2, places: [1, 2, 3, 4, null, 5, 6, 7, 8] },
@@ -26,9 +25,8 @@ export const cinemaHalls: CinemaHall[] = [
   },
   {
     id: 2,
-    title: "LUX Comfort",
-    description:
-      "In this hall you are going to have one of 12 comfortable places with beautiful red puffs and great audio and video quality",
+    title: "hall.title_2",
+    description: "hall.description_2",
     hallTicketMap: [
       { row: 1, places: [1, 2, 3, null, 4, 5, 6] },
       { row: 2, places: [1, 2, 3, null, 4, 5, 6] },
@@ -37,9 +35,8 @@ export const cinemaHalls: CinemaHall[] = [
   },
   {
     id: 3,
-    title: "LUX Huge 3D",
-    description:
-      "In this hall you can feel all the power of our 16D sound and 4D effects like wind, water and moving chairs",
+    title: "hall.title_3",
+    description: "hall.description_3",
     hallTicketMap: [
       { row: 1, places: [1, 2, 3, 4, null, 5, 6, 7, 8, null, 9, 10, 11, 12] },
       { row: 2, places: [1, 2, 3, 4, null, 5, 6, 7, 8, null, 9, 10, 11, 12] },

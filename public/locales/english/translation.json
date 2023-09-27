@@ -1,3 +1,79 @@
 {
-  "common.title":         "Luxurious cinema"
+  "common.title":               "Luxurious cinema",
+  "common.footer.title":        "Copyright by Alex Turchynov (2022 - {{currentYear}})",
+  "common.price_with_currency": "{{price}} UAH",
+  "common.buy_button":          "Buy",
+  "common.cancel_button":       "Cancel",
+  "common.confirm_button":      "Confirm",
+
+  "header.home":          "Home",
+  "header.login":         "Login",
+  "header.logout":        "Log out",
+
+  "home.cinema_description_1": "LUX Cinema",
+  "home.cinema_description_2": "Your best halls",
+  "home.cinema_description_3": "Hear everything from whisper to explosion",
+  "home.cinema_description_4": "Hear the picture",
+  "home.cinema_description_5": "Enjoy the show",
+
+  "movie.title_1":        "Better call Saul",
+  "movie.description_1":  "The trials and tribulations of criminal lawyer Jimmy McGill in the years leading up to his fateful run-in with Walter White and Jesse Pinkman.",
+  "movie.title_2":        "Deadpool",
+  "movie.description_2":  "Deadpool is a 2016 American superhero film based on the Marvel Comics character of the same name.",
+  "movie.title_3":        "Hardcore Genry",
+  "movie.description_3":  "Hardcore Henry (also known simply as Hardcore (Russian: Хардкор) in some countries)[5] is a 2015 science fiction action film written and directed by Ilya Naishuller (in his feature directorial debut), and produced by Timur Bekmambetov, Naishuller, Inga Vainshtein Smith and Ekaterina Kononenko.",
+  "movie.title_4":        "Pulp Fiction",
+  "movie.description_4":  "It tells four intertwining tales of crime and violence in Los Angeles, California.",
+  "movie.title_5":        "Shrek",
+  "movie.description_5":  "Shrek is a 2001 American computer-animated fantasy comedy film loosely based on the 1990 children's picture book of the same name by William Steig.",
+  "movie.title_6":        "Titanic",
+  "movie.description_6":  "Titanic is a 1997 American disaster film directed, written, produced, and co-edited by James Cameron.",
+
+  "movie.additional_description": "Enjoy the best cinema quality and high additional services in the best movie halls of our country! Select the date you want, pick comfortable time and buy online tickets using left panel. Please, come to our cinema 15 minutes before the show starts and feel free to buy any snacks or drinks in our cinema bar. You can also check out our new brand toys and souvenirs for children or adults on the left side of building. You don't need to print your tickets. Save some trees and show pdf ticket file to our employee instead.",
+
+  "date_picker.date":     "Select date:",
+  "date_picker.time":     "Select time:",
+
+  "date.sunday":    "Sunday",
+  "date.monday":    "Monday",
+  "date.tuesday":   "Tuesday",
+  "date.wednesday": "Wednesday",
+  "date.thursday":  "Thursday",
+  "date.friday":    "Friday",
+  "date.saturday":  "Saturday",
+  "date.january":   "of January",
+  "date.february":  "of February",
+  "date.march":     "of March",
+  "date.april":     "of April",
+  "date.may":       "of May",
+  "date.june":      "of June",
+  "date.july":      "of July",
+  "date.august":    "of August",
+  "date.september": "of September",
+  "date.october":   "of October",
+  "date.november":  "of November",
+  "date.december":  "of December",
+
+  "selector.default_option": "---Select an option---",
+
+  "hall.title_1":       "2D Sound Pro",
+  "hall.description_1": "In this hall you are going to have huge TechPro++ 2D projector screen with advanced 8D sound around you",
+  "hall.title_2":       "LUX Comfort",
+  "hall.description_2": "In this hall you are going to have one of 12 comfortable places with beautiful red puffs and great audio and video quality",
+  "hall.title_3":       "LUX Huge 3D",
+  "hall.description_3": "In this hall you can feel all the power of our 16D sound and 4D effects like wind, water and moving chairs",
+
+  "hall.selector_title": "Select movie hall",
+  "hall.screen_title":   "Screen",
+  "hall.row_number":     "Row {{number}}",
+
+  "ticket_view.row": "Row: {{row}}",
+  "ticket_view.place": "Place: {{place}}",
+  "ticket_view.price": "Price: {{price}}",
+
+  "buy_popup.title":        "Purchase confirmation",
+  "buy_popup.confirmation": "Are you sure you want to purchase selected tickets for {{price}}?",
+
+  "language.english":  "English",
+  "language.ukrainian": "Ukrainian"
 }

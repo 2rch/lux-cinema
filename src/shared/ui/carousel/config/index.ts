@@ -12,22 +12,22 @@ export interface CarouselElement {
 export const carouselElements: CarouselElement[] = [
   {
     image: cinemaView1,
-    title: "LUX Cinema",
+    title: "home.cinema_description_1",
   },
   {
     image: cinemaView2,
-    title: "Your best halls",
+    title: "cinema_description_2",
   },
   {
     image: soundView1,
-    title: "Hear everything from whisper to explosion",
+    title: "cinema_description_3",
   },
   {
     image: soundView2,
-    title: "Hear the picture",
+    title: "cinema_description_4",
   },
   {
     image: visitorsView,
-    title: "Enjoy the show",
+    title: "home.cinema_description_5",
   },
 ];
