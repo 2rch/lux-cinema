@@ -10,8 +10,10 @@ import {
 } from "../../../../shared/store/ticket/selectors";
 import { TicketPlace } from "../../../../shared/store/ticket/ticket";
 import "./index.scss";
+import { useTranslation } from "react-i18next";
 
 export const HallPreview = ({ hallTicketMap }: CinemaHall) => {
+  const { t } = useTranslation();
   const selectedTickets = useSelector(selectTicketPlaces);
   const currentHallId = useSelector(selectTicketHall);
   const currentHall = cinemaHalls.find((hall) => hall.id === currentHallId);
@@ -49,10 +51,12 @@ export const HallPreview = ({ hallTicketMap }: CinemaHall) => {
   return (
     <div className={"hall-preview"}>
       <div className={"hall-preview-screen"} />
-      <div className={"hall-preview-screen-text"}>Screen</div>
+      <div className={"hall-preview-screen-text"}>{t("hall.screen_title")}</div>
       {hallTicketMap.map(({ row, places }) => (
         <div className={"hall-preview-row"} key={row}>
-          <div className={"hall-preview-row-text"}>Row {row}</div>
+          <div className={"hall-preview-row-text"}>
+            {t("hall.row_number", { number: row })}
+          </div>
           <div className={"hall-preview-grid"}>
             {places.map((place, index) => (
               <HallGridElement

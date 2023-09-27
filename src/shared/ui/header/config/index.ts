@@ -4,20 +4,20 @@ import logoutIcon from "../../../assets/header/logout.svg";
 
 export const leftHeaderButtons = [
   {
-    title: "Home",
+    title: "header.home",
     icon: homeIcon,
     link: "/",
   },
 ];
 
 export const loginButton = {
-  title: "Login",
+  title: "header.login",
   icon: loginIcon,
   link: "/login",
 };
 
 export const logoutButton = {
-  title: "Log out",
+  title: "header.logout",
   icon: logoutIcon,
   link: "/logout",
 };

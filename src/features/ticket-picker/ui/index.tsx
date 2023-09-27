@@ -4,7 +4,9 @@ import { useSelector } from "react-redux";
 import { selectTicketHall } from "../../../shared/store/ticket/selectors";
 import { CinemaHall, cinemaHalls } from "../../hall-picker/config";
 import { HallPreview } from "./hall-preview";
+import { useTranslation } from "react-i18next";
 export const TicketPicker = () => {
+  const { t } = useTranslation();
   const [currentHall, setCurrentHall] = useState<CinemaHall | null>(null);
   const currentHallId = useSelector(selectTicketHall);
   useEffect(() => {
@@ -16,7 +18,9 @@ export const TicketPicker = () => {
     <div className={"ticket-picker"}>
       {currentHall && (
         <>
-          <div className={"ticket-picker-text"}>{currentHall?.description}</div>
+          <div className={"ticket-picker-text"}>
+            {t(currentHall?.description)}
+          </div>
           <HallPreview {...currentHall} />
         </>
       )}

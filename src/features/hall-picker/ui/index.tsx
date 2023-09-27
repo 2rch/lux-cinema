@@ -9,8 +9,10 @@ import {
 } from "../../../shared/store/ticket/actions";
 import { cinemaHalls } from "../config";
 import "./index.scss";
+import { useTranslation } from "react-i18next";
 
 export const HallPicker = () => {
+  const { t } = useTranslation();
   const currentHall = useSelector(selectTicketHall);
   const dispatch = useAppDispatch();
   const handleHallChange = (hallId: number) => {
@@ -20,13 +22,13 @@ export const HallPicker = () => {
   const hallOptions = cinemaHalls.map((hall) => {
     return {
       value: hall.id,
-      title: hall.title,
+      title: t(hall.title),
     };
   });
 
   return (
     <div className={"hall-picker"}>
-      <div className={"hall-picker-text"}>Select movie hall</div>
+      <div className={"hall-picker-text"}>{t("hall.selector_title")}</div>
       <RadioSelect
         options={hallOptions}
         selectedOption={currentHall}

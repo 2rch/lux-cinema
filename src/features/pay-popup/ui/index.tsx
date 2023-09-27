@@ -1,5 +1,6 @@
 import React from "react";
 import { Popup } from "../../../shared/ui/popup";
+import { useTranslation } from "react-i18next";
 
 interface BuyPopupProps {
   isOpen: boolean;
@@ -8,6 +9,7 @@ interface BuyPopupProps {
 }
 
 export const BuyPopup = ({ isOpen, closePopup, price }: BuyPopupProps) => {
+  const { t } = useTranslation();
   const preparedPrice = (price / 100).toFixed(2);
   const handleConfirmClick = () => {
     closePopup();
@@ -15,14 +17,15 @@ export const BuyPopup = ({ isOpen, closePopup, price }: BuyPopupProps) => {
 
   return (
     <Popup
-      title={"Purchase confirmation"}
+      title={t("buy_popup.title")}
       isOpen={isOpen}
       onCancelClick={closePopup}
       onConfirmClick={handleConfirmClick}
     >
       <div className={"buy-popup"}>
-        Are you sure you want to purchase selected tickets by {preparedPrice}{" "}
-        UAH?
+        {t("buy_popup.confirmation", {
+          price: t("common.price_with_currency", { price: preparedPrice }),
+        })}
       </div>
     </Popup>
   );
