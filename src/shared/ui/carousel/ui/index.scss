@@ -1,3 +1,5 @@
+@import "src/shared/styles/helpers/variables";
+
 .carousel-element .carousel-element-image {
   height: 500px;
 }
@@ -5,7 +7,7 @@
 .carousel-element {
   position: relative;
   text-align: center;
-  color: white;
+  color: $text-white-color;
 }
 
 .carousel-element-text {

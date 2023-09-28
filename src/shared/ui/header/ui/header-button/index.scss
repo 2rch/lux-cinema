@@ -3,17 +3,17 @@
 .header-button {
     display: flex;
     align-items: center;
-    margin: 15px;
-    padding: 5px;
-    border: 1px solid $main-color;
-    border-radius: 5px;
+    padding: 15px;
+    border: solid $main-color;
+    border-width: 0 1px 0 1px;
     justify-content: space-between;
     transition: all 0.5s;
 }
 
 .header-button:hover {
     background: $accent-color;
-    border: 1px solid black;
+    border: solid black;
+    border-width: 0 1px 0 1px;
     transition: all 0.5s;
 }
 
@@ -27,7 +27,7 @@ header a {
 }
 
 header {
-    background: #ffec47;
+    background: $main-color;
 }
 
 header a:hover {
