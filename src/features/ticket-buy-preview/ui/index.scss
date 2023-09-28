@@ -1,6 +1,8 @@
+@import "/src/shared/styles/helpers/variables";
+
 .ticket-buy-preview {
   display: flex;
-  background: grey;
+  background: $background-main-color;
   margin: 15px 15px 0 15px;
   max-height: 200px;
   transition: all 0.5s;
@@ -15,12 +17,12 @@
   gap: 10px;
   margin: 0 15px;
   padding: 15px;
-  background: grey;
+  background: $background-main-color;
 }
 
 .ticket-buy-text {
   font-size: larger;
-  background: lightgray;
+  background: $background-accent-color;
   border-radius: 5px;
   padding: 5px;
 }
@@ -28,6 +30,6 @@
 .ticket-buy-button {
   font-size: larger;
   background: green;
-  color: white;
+  color: $text-white-color;
   border-radius: 2px;
 }

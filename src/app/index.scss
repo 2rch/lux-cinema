@@ -1,3 +1,5 @@
+@import "src/shared/styles/helpers/variables";
+
 .App {
   text-align: center;
 }
@@ -10,7 +12,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: $text-white-color;
 }
 
 .App-link {

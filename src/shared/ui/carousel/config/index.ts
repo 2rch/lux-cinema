@@ -16,15 +16,15 @@ export const carouselElements: CarouselElement[] = [
   },
   {
     image: cinemaView2,
-    title: "cinema_description_2",
+    title: "home.cinema_description_2",
   },
   {
     image: soundView1,
-    title: "cinema_description_3",
+    title: "home.cinema_description_3",
   },
   {
     image: soundView2,
-    title: "cinema_description_4",
+    title: "home.cinema_description_4",
   },
   {
     image: visitorsView,
