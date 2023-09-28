@@ -1,7 +1,12 @@
 @import "../../../styles/helpers/variables";
 
 .footer {
+  display: flex;
+  justify-content: space-between;
   margin-top: auto;
-  padding: 5px;
+  padding: 2px;
   background: $main-color
+}
+.footer-text {
+  margin-left: 15px;
 }
